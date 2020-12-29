@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	if(isset($_SESSION["KyM-PR01-VS01-Logueado"])){
+		header("Location:../../../Tienda/VentaProductos.php");
+	}
+	else{
+		header("Location:../../../IniciarSesion/");
+	}
+?>
