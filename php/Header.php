@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Carrito</title>
 		<?php
 			include('php/meta.php');
 			include('php/styles.php');
