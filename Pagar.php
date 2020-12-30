@@ -75,7 +75,7 @@
 		<!-- Include the PayPal JavaScript SDK -->
 		<!--<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>-->
 		<!--<script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js"></script>-->
-		<script src="https://www.paypal.com/sdk/js?client-id=AS3G22vXdgKE3Bl6vLiMS8M8g1ZVLPIuzfy3hFfrq6WQKAt3cknvXSAzBdLiDkCMtQn-0CJok_8KlHYl"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.</script>
+		<script src="https://www.paypal.com/sdk/js?client-id=AS3G22vXdgKE3Bl6vLiMS8M8g1ZVLPIuzfy3hFfrq6WQKAt3cknvXSAzBdLiDkCMtQn-0CJok_8KlHYl&currency=MXN"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.</script>
 
 		<script>
 			// Render the PayPal button into #paypal-button-container
@@ -126,7 +126,8 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '0.03'
+									value: '<?php echo $Total; ?>',
+									currency : 'MXN'
 								}
 							}]
 						});
