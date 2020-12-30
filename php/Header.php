@@ -7,7 +7,11 @@
 			include('php/meta.php');
 			include('php/styles.php');
 		?>
+
+
 		<style type="text/css">
+
+			/*Responsive style { */
 			@media screen and (max-width: 800px) {
 			    #contenedor{
 			        width:100%;
@@ -30,7 +34,7 @@
 			        line-height:1.5em;
 			    }
 			}
-
+			/* } Responsive style*/
 
 
 
