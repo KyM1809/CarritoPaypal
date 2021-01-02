@@ -79,7 +79,7 @@
     				<div class="modal-body">
     					<div class="row">
     						<div class="col-12">
-    							<table class="table table-bordered table-hover table-striped table-sm">
+    							<table class="table table-hover table-striped table-sm">
     								<thead>
     									<tr>
     										<th></th>
@@ -178,7 +178,8 @@
 								Datos += '<tr>' + '<td>' + 'Direccion' + '</td>' + '<td>' + details.purchase_units[0].shipping.address.address_line_1 + '</td>' + '</tr>';
 								Datos += '<tr>' + '<td>' + 'Correo' + '</td>' + '<td>' + details.purchase_units[0].payee.email_address + '</td>' + '</tr>';
 								Datos += '<tr>' + '<td>' + 'Cantidad' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].amount.value + '</td>' + '</tr>';
-								Datos += '<tr>' + '<td>' + 'Moneda' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].amount.currency_code + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].id + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Fecha y hora' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].create_time + '</td>' + '</tr>';
 
 								$("#DatosCompra")[0].innerHTML = Datos;
 							}
