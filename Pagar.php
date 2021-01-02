@@ -71,11 +71,24 @@
     	<div class="modal fade" id="ModalOK">
     		<div class="modal-dialog">
     			<div class="modal-content">
-    				<div class="modal-header"></div>
+    				<div class="modal-header">
+    					<div class="modal-title">
+    						<h4><b>Compra exitosa</b></h4>
+    					</div>
+    				</div>
     				<div class="modal-body">
     					<div class="row">
     						<div class="col-12">
-    							<table class="table table-bordered table-hover table-striped table-sm"></table>
+    							<table class="table table-bordered table-hover table-striped table-sm">
+    								<thead>
+    									<tr>
+    										<th></th>
+    										<th></th>
+    									</tr>
+    								</thead>
+    								<tbody id="DatosCompra">
+    								</tbody>
+    							</table>
     						</div>
     					</div>
     				</div>
@@ -157,6 +170,17 @@
 							if(details.status == 'COMPLETED'){
 								$("#ModalOK").modal('show');
 								alert('OK');
+
+								var Datos = '';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.id + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.payer.email_address + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.purchase_units[0].shipping.name.full_name + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.purchase_units[0].shipping.address.address_line_1 + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.purchase_units[0].payee.email_address + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.payments.captures[0].amount.value + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.payments.captures[0].amount.currency_code + '</td>' + '</tr>';
+
+								$("#DatosCompra")[0].innerHTML = Datos;
 							}
 						});
 					}
