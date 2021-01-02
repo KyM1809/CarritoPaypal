@@ -177,7 +177,7 @@
 								Datos += '<tr>' + '<td>' + 'Nombre' + '</td>' + '<td>' + details.purchase_units[0].shipping.name.full_name + '</td>' + '</tr>';
 								Datos += '<tr>' + '<td>' + 'Direccion' + '</td>' + '<td>' + details.purchase_units[0].shipping.address.address_line_1 + '</td>' + '</tr>';
 								Datos += '<tr>' + '<td>' + 'Correo' + '</td>' + '<td>' + details.purchase_units[0].payee.email_address + '</td>' + '</tr>';
-								Datos += '<tr>' + '<td>' + 'Cantidda' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].amount.value + '</td>' + '</tr>';
+								Datos += '<tr>' + '<td>' + 'Cantidad' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].amount.value + '</td>' + '</tr>';
 								Datos += '<tr>' + '<td>' + 'Moneda' + '</td>' + '<td>' + details.purchase_units[0].payments.captures[0].amount.currency_code + '</td>' + '</tr>';
 
 								$("#DatosCompra")[0].innerHTML = Datos;
