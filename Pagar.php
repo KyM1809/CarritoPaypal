@@ -68,6 +68,22 @@
     		</p>
     	</div>
 
+    	<div class="modal fade" id="ModalOK">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header"></div>
+    				<div class="modal-body">
+    					<div class="row">
+    						<div class="col-12">
+    							<table class="table table-bordered table-hover table-striped table-sm"></table>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="modal-footer"></div>
+    			</div>
+    		</div>
+    	</div>
+
 		<?php
 			include('php/Scripts.php');
 		?>
@@ -139,6 +155,7 @@
 							console.log(details);
 							//alert('Transaction completed by ' + details.payer.name.given_name);
 							if(details.status == 'COMPLETED'){
+								$("#ModalOK").modal('show');
 								alert('OK');
 							}
 						});
