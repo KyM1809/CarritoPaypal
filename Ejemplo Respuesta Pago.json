@@ -1,15 +1,18 @@
 {
 	"ack":"success",
-	"data":{
+	"data":
+	{
 		"create_time":"2020-12-30T00:57:57Z",
 		"update_time":"2020-12-30T00:58:18Z",
 		"id":"7RG62927N5130571U",
 		"intent":"CAPTURE",
 		"status":"COMPLETED",
-		"payer":{
+		"payer":
+		{
 			"email_address":"sb-i77o64191403@personal.example.com",
 			"payer_id":"ZN6XERRPCGL84",
-			"address":{
+			"address":
+			{
 				"country_code":"ES"
 			},
 			"name":{
@@ -17,39 +20,56 @@
 				"surname":"Doe"
 			}
 		},
-		"purchase_units":[
+		"purchase_units":
+		[
 			{
 				"reference_id":"default","amount":
-				{"value":"0.03","currency_code":"USD"},
+				{
+					"value":"0.03","currency_code":"USD"
+				},
 				"payee":{
 					"email_address":"sb-7ph2t4194221@business.example.com",
 					"merchant_id":"WZYF36ANCQXFY"
 				},
-				"shipping":{
-					"name":{
+				"shipping":
+				{
+					"name":
+					{
 						"full_name":"John Doe"
 					},
 					"address":
 					{
 						"address_line_1":"calle Vilamar� 76993- 17469",
-					"admin_area_2":"Albacete",
-					"admin_area_1":"Albacete",
-					"postal_code":"02001","country_code":"ES"
+						"admin_area_2":"Albacete",
+						"admin_area_1":"Albacete",
+						"postal_code":"02001",
+						"country_code":"ES"
 					}
 				},
-				"payments":{
-					"captures":[
+				"payments":
+				{
+					"captures":
+					[
 						{
 							"status":"COMPLETED",
 							"id":"52M53798D75291409",
 							"final_capture":true,
 							"create_time":"2020-12-30T00:58:18Z",
 							"update_time":"2020-12-30T00:58:18Z",
-							"amount":{
+							"amount":
+							{
 								"value":"0.03",
 								"currency_code":"USD"
 							},
-							"seller_protection":{"status":"ELIGIBLE","dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"]},
+							"seller_protection":
+							{
+								"status":"ELIGIBLE",
+								"dispute_categories":
+								[
+									"ITEM_NOT_RECEIVED",
+									"UNAUTHORIZED_TRANSACTION"
+								]
+							},
 							"links":[
 								{"href":"https://api.sandbox.paypal.com/v2/payments/captures/52M53798D75291409","rel":"self","method":"GET","title":"GET"},
 								{"href":"https://api.sandbox.paypal.com/v2/payments/captures/52M53798D75291409/refund","rel":"refund","method":"POST","title":"POST"},
