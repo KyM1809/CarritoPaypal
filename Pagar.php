@@ -15,7 +15,7 @@
 		foreach ($_SESSION['Carrito'] as $key => $Producto) {
 			$Total = $Total + ($Producto['Precio'] * $Producto['Cantidad']);
 		}
-		
+
 		$s = $pdo->prepare('INSERT INTO tventas (CveTransaccion,DatosPago,Fecha,Correo,Total,Status) VALUES(:CVE,:DP,NOW(),:CORREO,:TOTAL,:ST);');
 		$s->bindParam(':CVE', $SSID);
 		$s->bindParam(':DP', $SSID);
@@ -143,6 +143,10 @@
 						});
 					}
 				}).render('#paypal-button-container');
+
+				$("#BtnHecho").on('click', function(){
+					window.location.href = 'Pagado.php';
+				});
 		</script>
 
 <?php
