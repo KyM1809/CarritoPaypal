@@ -27,7 +27,7 @@
 
 				<?php foreach ($Lista as $Producto) { ?>
 
-					<div class="col-3">
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
 						<div class="card">
 							<span><?php echo $Producto['Nombre']; ?></span>
 							<img height="200" src="<?php echo $Producto['Imagen'];?>" class="card-img-top" title="Titulo" data-trigger="hover" data-toggle="popover" data-content="<?php echo $Producto['Descripcion']; ?>">
