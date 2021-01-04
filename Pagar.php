@@ -131,7 +131,7 @@
 						return actions.order.capture().then(function(details) {
 							console.log(details);
 							if(details.status == 'COMPLETED'){
-								$("#ModalOK").modal('show');
+								$("#ModalOK").modal({keyboard:false, backdrop:false});
 
 								var Datos = '';
 								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.id + '</td>' + '</tr>';
