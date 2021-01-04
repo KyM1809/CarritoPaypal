@@ -15,7 +15,7 @@
 		foreach ($_SESSION['Carrito'] as $key => $Producto) {
 			$Total = $Total + ($Producto['Precio'] * $Producto['Cantidad']);
 		}
-		//echo '<h3>' . $Total . '</h3>';
+		
 		$s = $pdo->prepare('INSERT INTO tventas (CveTransaccion,DatosPago,Fecha,Correo,Total,Status) VALUES(:CVE,:DP,NOW(),:CORREO,:TOTAL,:ST);');
 		$s->bindParam(':CVE', $SSID);
 		$s->bindParam(':DP', $SSID);
@@ -39,14 +39,12 @@
 ?>
 
 	<style>
-        /* Media query for mobile viewport */
         @media screen and (max-width: 400px) {
             #paypal-button-container {
                 width: 100%;
             }
         }
         
-        /* Media query for desktop viewport */
         @media screen and (min-width: 400px) {
             #paypal-button-container {
                 width: 250px;
@@ -59,7 +57,7 @@
     		<p class="lead">Estas a punto de pagar con paypal la cantidad de : <h4>$<?php echo number_format($Total,2); ?></h4> </p>
     		<div class="row">
     			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4" align="center">
-    				<!--<div id="paypal-button-container"></div>-->
+
     				<div id="paypal-button-container"></div>
     			</div>
     		</div>
@@ -109,16 +107,12 @@
 			include('php/Scripts.php');
 		?>
 
-		<!-- Include the PayPal JavaScript SDK -->
-		<!--<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>-->
-		<!--<script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js"></script>-->
 		<script src="https://www.paypal.com/sdk/js?client-id=AS3G22vXdgKE3Bl6vLiMS8M8g1ZVLPIuzfy3hFfrq6WQKAt3cknvXSAzBdLiDkCMtQn-0CJok_8KlHYl&currency=MXN"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.</script>
 
 		<script>
 
 				paypal.Buttons({
 					createOrder: function(data, actions) {
-						// This function sets up the details of the transaction, including the amount and line item details.
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
@@ -129,14 +123,10 @@
 						});
 					},
 					onApprove: function(data, actions) {
-						// This function captures the funds from the transaction.
 						return actions.order.capture().then(function(details) {
-							// This function shows a transaction success message to your buyer.
 							console.log(details);
-							//alert('Transaction completed by ' + details.payer.name.given_name);
 							if(details.status == 'COMPLETED'){
 								$("#ModalOK").modal('show');
-								alert('OK');
 
 								var Datos = '';
 								Datos += '<tr>' + '<td>' + 'Id' + '</td>' + '<td>' + details.id + '</td>' + '</tr>';
@@ -153,7 +143,6 @@
 						});
 					}
 				}).render('#paypal-button-container');
-				//This function displays Smart Payment Buttons on your web page.
 		</script>
 
 <?php
