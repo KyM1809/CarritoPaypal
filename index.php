@@ -23,7 +23,6 @@
 					$s = $pdo->prepare("SELECT * FROM tproductos;");
 					$s->execute();
 					$Lista = $s->fetchAll(PDO::FETCH_ASSOC);
-					//print_r($Lista);
 				?>
 
 				<?php foreach ($Lista as $Producto) { ?>
@@ -54,7 +53,7 @@
 
 			</div>
 		</div>
-		
+
 <?php
 	include('php/Footer.php');
 ?>
