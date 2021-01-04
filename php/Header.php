@@ -11,7 +11,6 @@
 
 		<style type="text/css">
 
-			/*Responsive style { */
 			@media screen and (max-width: 800px) {
 			    #contenedor{
 			        width:100%;
@@ -34,7 +33,6 @@
 			        line-height:1.5em;
 			    }
 			}
-			/* } Responsive style*/
 
 
 
@@ -47,12 +45,11 @@
 			.carousel-item{
 				height: 600px;
 			}
-			/* Basic styling */
+
 			* {
 				box-sizing: border-box;
 				padding: 0;
 				margin: 0;
-				/*color: black !important;*/
 			}
 			body {
 				font-family: sans-serif;
@@ -87,7 +84,7 @@
 			.button.secondary {
 				border-bottom: 1px #444 solid;
 			}
-			/* Mobile menu */
+
 			.menu {
 				display: flex;
 				flex-wrap: wrap;
@@ -109,7 +106,7 @@
 			.item.active {
 				display: block;
 			}
-			/* Tablet menu */
+
 			@media all and (min-width: 600px) {
 				.menu {
 					justify-content: center;
@@ -151,7 +148,7 @@
 					color: #ddd;
 				}
 			}
-			/* Desktop menu */
+			
 			@media all and (min-width: 900px) {
 				.item {
 					display: block;
