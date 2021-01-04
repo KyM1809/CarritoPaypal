@@ -7,5 +7,4 @@
 	define("KEY","MAGS");
 	define("COD","AES-128-ECB");
 
-	//phpinfo();
 ?>
