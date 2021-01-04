@@ -30,7 +30,7 @@
 					<div class="col-3">
 						<div class="card">
 							<span><?php echo $Producto['Nombre']; ?></span>
-							<img height="317" src="<?php echo $Producto['Imagen'];?>" class="card-img-top" title="Titulo" data-trigger="hover" data-toggle="popover" data-content="<?php echo $Producto['Descripcion']; ?>">
+							<img height="200" src="<?php echo $Producto['Imagen'];?>" class="card-img-top" title="Titulo" data-trigger="hover" data-toggle="popover" data-content="<?php echo $Producto['Descripcion']; ?>">
 							<div class="card-body">
 								<h5 class="card-title">$<?php echo $Producto['Precio']; ?></h5>
 								<p class="card-text"><?php echo $Producto['Descripcion']; ?></p>
