@@ -72,7 +72,7 @@
 						$Msg = 'Producto agregado al carrito';
 					}
 				}
-				//$Msg = print_r($_SESSION, true);
+				
 				break;
 			
 			case 'Eliminar':
