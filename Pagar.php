@@ -115,47 +115,6 @@
 		<script src="https://www.paypal.com/sdk/js?client-id=AS3G22vXdgKE3Bl6vLiMS8M8g1ZVLPIuzfy3hFfrq6WQKAt3cknvXSAzBdLiDkCMtQn-0CJok_8KlHYl&currency=MXN"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.</script>
 
 		<script>
-			// Render the PayPal button into #paypal-button-container
-			//paypal.Buttons().render('#paypal-button-container');
-			/*
-			$(document).ready(function(){
-				
-			});
-
-			paypal.Button.render({
-					env:'sandbox',
-					style:{
-						label:'checkout',
-						size:'responsive',
-						shape:'pill',
-						color:'gold'
-					},
-					client:{
-						sandbox:'AS3G22vXdgKE3Bl6vLiMS8M8g1ZVLPIuzfy3hFfrq6WQKAt3cknvXSAzBdLiDkCMtQn-0CJok_8KlHYl',
-						//production:'ELGW18uMT4wfrgQ4EkHCsifq7yelWd_8QkUAyKIbedJujzhAmV7q_I9VfMiEuY3t_VxlMxWPEpUyxjE2'
-						production:''
-					},
-					payment: function(data, actions){
-						return actions.payment.create({
-							payment:{
-								transactions : [
-									{
-										amount : {total : '<?php echo $Total; ?>', currency : 'MXN'},
-										description: 'Compra de productos a XROM SYSTEMS : <?php echo number_format($Total,2); ?>',
-										custom: '<?php echo $SSID; ?>#<?php echo openssl_encrypt($IdVenta, COD, KEY); ?>'
-									}
-								]
-							}
-						});
-					},
-					onAuthorize : function(data, actions){
-						return actions.payment.execute().then(function(){
-							console.log(data);
-							window.location = 'Verificador.php?paymentToken=' + data.paymentToken + '&paymentID=' + data.paymentID;
-						});
-					}
-				},'#paypal-button-container');
-				*/
 
 				paypal.Buttons({
 					createOrder: function(data, actions) {
