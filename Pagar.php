@@ -15,7 +15,7 @@
 		foreach ($_SESSION['Carrito'] as $key => $Producto) {
 			$Total = $Total + ($Producto['Precio'] * $Producto['Cantidad']);
 		}
-
+		
 		$s = $pdo->prepare('INSERT INTO tventas (CveTransaccion,DatosPago,Fecha,Correo,Total,Status) VALUES(:CVE,:DP,NOW(),:CORREO,:TOTAL,:ST);');
 		$s->bindParam(':CVE', $SSID);
 		$s->bindParam(':DP', $SSID);
@@ -94,7 +94,7 @@
     					<div class="row">
     						<div class="col-12" align="center">
     							<div class="btn-group" align="center">
-		    						<a class="btn btn-success btn-lg" id="BtnHecho">Hecho</a>
+		    						<button class="btn btn-success btn-lg" id="BtnHecho">Hecho</button>
 		    					</div>
     						</div>
     					</div>
