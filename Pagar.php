@@ -76,6 +76,11 @@
     				</div>
     				<div class="modal-body">
     					<div class="row">
+    						<div class="col-12" align="center">
+    							<img src="Imagenes/xromlogo.png" />
+    						</div>
+    					</div>
+    					<div class="row">
     						<div class="col-12">
     							<table class="table table-hover table-striped table-sm">
     								<thead>
