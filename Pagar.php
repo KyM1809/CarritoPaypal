@@ -92,7 +92,15 @@
     						</div>
     					</div>
     				</div>
-    				<div class="modal-footer"></div>
+    				<div class="modal-footer">
+    					<div class="row">
+    						<div class="col-12" align="center">
+    							<div class="btn-group" align="center">
+		    						<button class="btn btn-success btn-lg" id="BtnHecho">Hecho</button>
+		    					</div>
+    						</div>
+    					</div>
+    				</div>
     			</div>
     		</div>
     	</div>
